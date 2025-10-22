@@ -1,0 +1,4 @@
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: plotly in /home/gaganc/.local/lib/python3.13/site-packages (6.3.0)
+Requirement already satisfied: narwhals>=1.15.1 in /home/gaganc/.local/lib/python3.13/site-packages (from plotly) (2.6.0)
+Requirement already satisfied: packaging in /usr/lib/python3.13/site-packages (from plotly) (24.2)
