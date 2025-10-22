@@ -1,10 +1,10 @@
 # PINN Option Pricing Research Platform - Complete Documentation
 
-## 🎯 **Project Overview**
+##  **Project Overview**
 
 This is a comprehensive Physics-Informed Neural Network (PINN) based option pricing platform that supports both European and American options (call/put). The platform consists of a FastAPI backend and Streamlit frontend, providing professional-grade research tools for quantitative finance.
 
-## 📁 **Project Structure**
+##  **Project Structure**
 
 ```
 BSM_PINN/
@@ -22,10 +22,9 @@ BSM_PINN/
 ├── train_models.py            # Training script for all models
 ├── BSM_PINN_2.ipynb           # Original Jupyter notebook
 ├── requirements.txt           # Python dependencies
-└── README.md                  # This documentation
-```
+└── README.md                  
 
-## 🧠 **PINN Architecture & Training**
+##  **PINN Architecture & Training**
 
 ### **Neural Network Architecture**
 - **Input Layer**: 5 neurons (t, S, r, σ, K)
@@ -141,7 +140,7 @@ GET /convergence?option_style=european&option_type=call
 - **Error Analysis**: Automatic comparison with PINN predictions
 - **Validation**: PINN vs analytical accuracy metrics
 
-## 🎨 **Frontend (Streamlit)**
+##  **Frontend (Streamlit)**
 
 ### **Professional UI Design**
 - **Clean Interface**: No icons, professional color scheme
@@ -195,36 +194,36 @@ GET /convergence?option_style=european&option_type=call
 - **Surface Parameters**: Ranges and resolution settings
 - **API Settings**: Backend configuration
 
-## 🚀 **Phase 1 & 2 Implementation Status**
+## **Phase 1 & 2 Implementation Status**
 
-### **✅ Completed Features**
+### ** Completed Features**
 
 #### **Phase 1.1: Model Comparison & Validation**
-- ✅ Black-Scholes analytical pricing integration
-- ✅ Error analysis with absolute and relative errors
-- ✅ Accuracy indicators (Excellent/Good/Moderate/Poor)
-- ✅ Greeks comparison tables
-- ✅ Model performance metrics
+-  Black-Scholes analytical pricing integration
+-  Error analysis with absolute and relative errors
+-  Accuracy indicators (Excellent/Good/Moderate/Poor)
+-  Greeks comparison tables
+-  Model performance metrics
 
 #### **Phase 1.2: Advanced Analytics**
-- ✅ Batch parameter analysis
-- ✅ Error distribution visualization
-- ✅ Summary statistics
-- ✅ CSV export functionality
-- ✅ Professional error analysis dashboard
+-  Batch parameter analysis
+-  Error distribution visualization
+-  Summary statistics
+-  CSV export functionality
+-  Professional error analysis dashboard
 
 #### **Phase 1.3: Enhanced Visualization**
-- ✅ Proper axis labels for all plots
-- ✅ Custom hover templates
-- ✅ Interactive 3D surfaces
-- ✅ Professional styling and layout
+-  Proper axis labels for all plots
+-  Custom hover templates
+-  Interactive 3D surfaces
+-  Professional styling and layout
 
-### **🔄 In Progress**
-- 🔄 Sensitivity analysis dashboard
-- 🔄 Monte Carlo analysis
-- 🔄 Real-time market data integration
+### ** In Progress**
+-  Sensitivity analysis dashboard
+-  Monte Carlo analysis
+-  Real-time market data integration
 
-### **📋 Next Phase Priorities**
+### ** Next Phase Priorities**
 
 #### **Phase 2.1: Experiment Management**
 - Scenario builder (save/load configurations)
@@ -244,7 +243,7 @@ GET /convergence?option_style=european&option_type=call
 - Historical backtesting
 - Portfolio analysis
 
-## 🛠 **Technical Implementation Details**
+##  **Technical Implementation Details**
 
 ### **Model Loading System**
 ```python
@@ -284,7 +283,7 @@ if req.option_style == "european":
         relative_error = error / abs(bs_price)
 ```
 
-## 📊 **Usage Examples**
+##  **Usage Examples**
 
 ### **Single Option Pricing**
 1. Select option style and type in sidebar
@@ -306,7 +305,7 @@ if req.option_style == "european":
 4. Generate interactive 3D plot
 5. Explore surface with proper axis labels
 
-## 🔧 **Installation & Setup**
+##  **Installation & Setup**
 
 ### **Requirements**
 ```txt
@@ -339,7 +338,7 @@ streamlit run frontend/streamlit_app.py --server.headless true --server.port 850
 - **Frontend**: http://localhost:8501
 - **API Documentation**: http://localhost:8000/docs
 
-## 🎯 **Key Achievements**
+##  **Key Achievements**
 
 1. **Professional Research Platform**: Clean, academic-style interface
 2. **Multi-Model Support**: European/American, Call/Put combinations
@@ -348,7 +347,7 @@ streamlit run frontend/streamlit_app.py --server.headless true --server.port 850
 5. **Enhanced Visualization**: Proper axis labels, interactive plots
 6. **Research-Ready**: Export capabilities, statistical analysis
 
-## 🔮 **Future Roadmap**
+##  **Future Roadmap**
 
 ### **Phase 3: Advanced Research Capabilities**
 - Ensemble methods and uncertainty quantification
@@ -365,7 +364,7 @@ streamlit run frontend/streamlit_app.py --server.headless true --server.port 850
 - Cloud deployment
 - Microservices architecture
 
-## 📝 **Development Notes**
+##  **Development Notes**
 
 ### **Context Window Management**
 - This documentation preserves all implementation details
