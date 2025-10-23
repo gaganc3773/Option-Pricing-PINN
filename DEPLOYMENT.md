@@ -1,6 +1,6 @@
 # PINN Option Pricing Research Platform - Deployment Guide
 
-## 🚀 Quick Deployment Options
+##  Quick Deployment Options
 
 ### Option 1: Railway (Recommended)
 1. Push your code to GitHub
@@ -24,7 +24,7 @@
    - Backend: `uvicorn backend.main:app --host 0.0.0.0 --port $PORT`
    - Frontend: `streamlit run frontend/streamlit_app.py --server.port $PORT --server.address 0.0.0.0`
 
-## 📁 Project Structure
+##  Project Structure
 ```
 Option_Pricing_Tool/
 ├── backend/
@@ -38,14 +38,14 @@ Option_Pricing_Tool/
 └── README.md
 ```
 
-## 🔧 Environment Variables
+##  Environment Variables
 The app auto-detects deployment environment:
 - Railway: Uses RAILWAY_PUBLIC_DOMAIN
 - Render: Uses RENDER_EXTERNAL_URL  
 - Heroku: Uses HEROKU_APP_NAME
 - Local: Uses localhost:8000
 
-## 📊 Features
+##  Features
 - Physics-Informed Neural Networks for option pricing
 - European & American options (calls & puts)
 - Real-time Greeks calculation
@@ -53,7 +53,7 @@ The app auto-detects deployment environment:
 - Multi-currency support
 - Professional research interface
 
-## 🎯 Perfect for:
+##  Perfect for:
 - Research presentations
 - Academic demonstrations
 - Internship portfolios
