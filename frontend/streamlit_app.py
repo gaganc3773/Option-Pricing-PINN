@@ -8,20 +8,7 @@ from plotly.subplots import make_subplots
 import time
 import json
 
-# Auto-detect API base URL for different environments
-import os
-if os.getenv("RAILWAY_PUBLIC_DOMAIN"):
-    # Railway deployment
-    API_BASE = f"https://{os.getenv('RAILWAY_PUBLIC_DOMAIN')}"
-elif os.getenv("RENDER_EXTERNAL_URL"):
-    # Render deployment
-    API_BASE = os.getenv("RENDER_EXTERNAL_URL")
-elif os.getenv("HEROKU_APP_NAME"):
-    # Heroku deployment
-    API_BASE = f"https://{os.getenv('HEROKU_APP_NAME')}.herokuapp.com"
-else:
-    # Local development
-    API_BASE = "http://localhost:8000"
+API_BASE =  "https://option-pricing-pinn.onrender.com"
 
 st.set_page_config(
     page_title="PINN Option Pricing Research Platform", 
