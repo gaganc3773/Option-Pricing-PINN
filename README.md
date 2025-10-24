@@ -4,6 +4,9 @@
 
 This is a comprehensive Physics-Informed Neural Network (PINN) based option pricing platform that supports both European and American options (call/put). The platform consists of a FastAPI backend and Streamlit frontend, providing professional-grade research tools for quantitative finance.
 
+### **Deployment**
+- Deployed `frontend/` through `streamlit cloud` and `backend/` through `Render`
+- Working WEB URL - `https://option-pricing-pinn-gcvs.streamlit.app/`
 ##  **Project Structure**
 
 ```
@@ -193,50 +196,50 @@ GET /convergence?option_style=european&option_type=call
 - **Surface Parameters**: Ranges and resolution settings
 - **API Settings**: Backend configuration
 
-## **Phase 1 & 2 Implementation Status**
+## **Implementation Status**
 
-### ** Completed Features**
+### **Completed Features**
 
-#### **Phase 1.1: Model Comparison & Validation**
+#### **Model Comparison & Validation**
 -  Black-Scholes analytical pricing integration
 -  Error analysis with absolute and relative errors
 -  Accuracy indicators (Excellent/Good/Moderate/Poor)
 -  Greeks comparison tables
 -  Model performance metrics
 
-#### **Phase 1.2: Advanced Analytics**
+#### **Advanced Analytics**
 -  Batch parameter analysis
 -  Error distribution visualization
 -  Summary statistics
 -  CSV export functionality
 -  Professional error analysis dashboard
 
-#### **Phase 1.3: Enhanced Visualization**
+#### **Enhanced Visualization**
 -  Proper axis labels for all plots
 -  Custom hover templates
 -  Interactive 3D surfaces
 -  Professional styling and layout
 
-### ** In Progress**
+### **In Progress**
 -  Sensitivity analysis dashboard
 -  Monte Carlo analysis
 -  Real-time market data integration
 
-### ** Next Phase Priorities**
+### **Next Phase Priorities**
 
-#### **Phase 2.1: Experiment Management**
+#### **Experiment Management**
 - Scenario builder (save/load configurations)
 - Advanced batch processing
 - Excel export functionality
 - Research notebook integration
 
-#### **Phase 2.2: Advanced PINN Analysis**
+#### **Advanced PINN Analysis**
 - Loss component analysis
 - Model architecture comparison
 - Hyperparameter optimization
 - Uncertainty quantification
 
-#### **Phase 2.3: Real-Time Market Integration**
+#### **Real-Time Market Integration**
 - Live data feeds (Yahoo Finance, Alpha Vantage)
 - Market validation
 - Historical backtesting
@@ -308,7 +311,7 @@ if req.option_style == "european":
 
 ##  **Installation & Setup**
 
-### **Requirements - Frontend + Backend **
+### **Requirements - Frontend + Backend**
 ```txt
 fastapi==0.115.0
 uvicorn[standard]==0.30.6
@@ -350,17 +353,17 @@ streamlit run frontend/streamlit_app.py --server.headless true --server.port 850
 
 ##  **Future Roadmap**
 
-### ** Advanced Research Capabilities**
+### **Advanced Research Capabilities**
 - Ensemble methods and uncertainty quantification
 - Financial engineering tools (option strategies, risk management)
 - Research collaboration features
 
-### ** Advanced Visualization**
+### **Advanced Visualization**
 - Custom plot types (volatility smiles, term structures)
 - Interactive dashboards
 - Mobile responsiveness
 
-### **  Performance & Scalability**
+### **Performance & Scalability**
 - GPU acceleration
 - Cloud deployment
 - Microservices architecture
