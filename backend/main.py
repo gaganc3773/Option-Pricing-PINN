@@ -509,7 +509,7 @@ async def convergence(option_style: str = "european", option_type: str = "call")
 	try:
 		# Load convergence data from CSV
 		model_key = f"{option_style}_{option_type}"
-		df = pd.read_csv(f"models/{model_key}_convergence.csv")
+		df = pd.read_csv(f"backend/models/{model_key}_convergence.csv")
 		
 		convergence_data = []
 		for _, row in df.iterrows():
