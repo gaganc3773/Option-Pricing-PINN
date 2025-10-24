@@ -497,7 +497,7 @@ class ConvergencePoint(BaseModel):
 	exercise: Optional[float] = None  # For American options
 
 
-@app.post("/convergence", response_model=List[ConvergencePoint])
+@app.get("/convergence", response_model=List[ConvergencePoint])
 async def convergence(option_style: str = "european", option_type: str = "call"):
 	"""Get convergence data for a specific model"""
 	# Validate inputs
