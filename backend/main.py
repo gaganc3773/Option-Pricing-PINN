@@ -40,7 +40,7 @@ def get_model(option_style: str, option_type: str) -> nn.Module:
 	if model_key not in _models:
 		model = NN()
 		try:
-			model_path = f"backend/models/{model_key}.pt"
+			model_path = f"models/{model_key}.pt"
 			state = torch.load(model_path, map_location=_device)
 			model.load_state_dict(state)
 			model.eval()
@@ -509,7 +509,7 @@ async def convergence(option_style: str = "european", option_type: str = "call")
 	try:
 		# Load convergence data from CSV
 		model_key = f"{option_style}_{option_type}"
-		df = pd.read_csv(f"backend/models/{model_key}_convergence.csv")
+		df = pd.read_csv(f"models/{model_key}_convergence.csv")
 		
 		convergence_data = []
 		for _, row in df.iterrows():
