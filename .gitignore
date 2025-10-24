@@ -78,8 +78,6 @@ tmp/
 # Streamlit
 .streamlit/secrets.toml
 
-# Railway
-.railway/
 
 # Deployment
 deploy/
