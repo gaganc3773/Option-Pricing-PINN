@@ -285,7 +285,7 @@ with pricing_tab:
                       "option_style": option_style, "option_type": option_type}
             try:
                 with st.spinner("Computing PINN price..."):
-                    resp = requests.post(f"{api_base}/price", json=payload, timeout=10)
+                    resp = requests.post(f"{api_base}/price", json=payload, timeout=60)
                     resp.raise_for_status()
                     result = resp.json()
                 
@@ -426,7 +426,7 @@ with greeks_tab:
                       "option_style": option_style, "option_type": option_type}
             try:
                 with st.spinner("Computing Greeks..."):
-                    resp = requests.post(f"{api_base}/greeks", json=payload, timeout=15)
+                    resp = requests.post(f"{api_base}/greeks", json=payload, timeout=60)
                     resp.raise_for_status()
                     greeks = resp.json()
                 
@@ -574,7 +574,7 @@ with surface2d_tab:
                       "option_style": option_style, "option_type": option_type}
             try:
                 with st.spinner("Generating pricing curve..."):
-                    resp = requests.post(f"{api_base}/surface", json=payload, timeout=20)
+                    resp = requests.post(f"{api_base}/surface", json=payload, timeout=60)
                     resp.raise_for_status()
                     points = resp.json()
                     df = pd.DataFrame(points)
@@ -622,7 +622,7 @@ with surface3d_tab:
             }
             try:
                 with st.spinner("Generating 3D surface..."):
-                    resp = requests.post(f"{api_base}/surface3d", json=payload, timeout=30)
+                    resp = requests.post(f"{api_base}/surface3d", json=payload, timeout=60)
                     resp.raise_for_status()
                     points = resp.json()
                     df = pd.DataFrame(points)
@@ -673,7 +673,7 @@ with convergence_tab:
         if st.button("Load Convergence Data", type="primary", use_container_width=True):
             try:
                 with st.spinner("Loading convergence data..."):
-                    resp = requests.get(f"{api_base}/convergence?option_style={option_style}&option_type={option_type}", timeout=10)
+                    resp = requests.get(f"{api_base}/convergence?option_style={option_style}&option_type={option_type}", timeout=60)
                     resp.raise_for_status()
                     conv_data = resp.json()
                 
@@ -818,7 +818,7 @@ with analysis_tab:
             }
             
             with st.spinner("Starting PINN simulation..."):
-                resp = requests.post(f"{api_base}/simulate", json=simulation_payload, timeout=10)
+                resp = requests.post(f"{api_base}/simulate", json=simulation_payload, timeout=60)
                 resp.raise_for_status()
                 simulation_response = resp.json()
                 simulation_id = simulation_response["simulation_id"]
